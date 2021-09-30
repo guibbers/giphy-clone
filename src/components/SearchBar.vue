@@ -24,12 +24,13 @@ export default {
   },
   methods: {
     getGifs() {
-      this.$store.dispatch('setQuery', this.query)
-      this.$store.dispatch('fetchGifList', {
-        keyword: this.query,
-        limit: this.$store.state.limit,
-        offset: this.$store.state.offset,
-      })
+      this.$store.dispatch('setQuery', this.query).then(
+        this.$store.dispatch('fetchGifList', {
+          keyword: this.$store.state.query,
+          limit: this.$store.state.limit,
+          offset: this.$store.state.offset,
+        })
+      )
     },
   },
   mounted() {
@@ -37,5 +38,3 @@ export default {
   },
 }
 </script>
-
-<style></style>
