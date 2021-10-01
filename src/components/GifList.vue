@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="gif-list">
     <div class="d-flex flex-wrap">
       <Gif v-for="gif in gifList" :key="gif.id" :gifImage="gif" />
     </div>
@@ -36,4 +36,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.gif-list {
+  margin-left: 7rem;
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
   <div class="gif-wrapper">
     <div class="gif-content">
-      <v-img :src="gifImage.images.original.url" height="250px" width="360px" />
+      <v-img :src="gifImage.images.original.url" height="350px" width="400px" />
     </div>
   </div>
 </template>
