@@ -3,13 +3,18 @@
     <div class="gif-content">
       <v-img :src="gifImage.images.original.url" height="350px" width="400px" />
     </div>
+    <Loader class="gif-background" />
   </div>
 </template>
 
 <script>
+import Loader from '@/components/Loader.vue'
 export default {
   props: {
     gifImage: Object,
+  },
+  components: {
+    Loader,
   },
 }
 </script>
@@ -21,15 +26,16 @@ export default {
 }
 
 .gif-content {
+  border: 1px solid black;
   position: relative;
   z-index: 100;
 }
 
 .gif-background {
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 45%;
   z-index: 0;
-  color: white;
+  color: black;
 }
 </style>
